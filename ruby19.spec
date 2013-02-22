@@ -12,13 +12,13 @@ Requires:       libyaml
 Source0:        ftp://ftp.ruby-lang.org/pub/ruby/ruby-%{rubyver}-%{rubyminorver}.tar.gz
 Summary:        An interpreter of object-oriented scripting language
 Group:          Development/Languages
-Provides: ruby(abi) = 1.9
+Provides: ruby(abi) = %{version}
 Provides: ruby-irb
 Provides: ruby-rdoc
 Provides: ruby-libs
 Provides: ruby-devel
 Provides: rubygems
-Obsoletes: ruby(abi) = 1.9
+Obsoletes: ruby(abi) <= %{version}
 Obsoletes: ruby
 Obsoletes: ruby-irb
 Obsoletes: ruby-libs
