@@ -1,12 +1,13 @@
 %define rubyver         1.9.3
 %define rubyminorver    p392
+%define version         %{rubyver}%{rubyminorver}
 
 Name:           ruby
 Version:        %{rubyver}%{rubyminorver}
 Release:        1%{?dist}
 License:        Ruby License/GPL - see COPYING
 URL:            http://www.ruby-lang.org/
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRoot:      %{_tmppath}/%{name}-%{rubyver}%{rubyminorver}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  readline libyaml libyaml-devel readline-devel ncurses ncurses-devel gdbm gdbm-devel glibc-devel tcl-devel gcc unzip openssl-devel db4-devel byacc make libffi-devel
 Requires:       libyaml
 Source0:        ftp://ftp.ruby-lang.org/pub/ruby/ruby-%{rubyver}-%{rubyminorver}.tar.gz
@@ -25,12 +26,6 @@ Provides:       ruby-rdoc = %{version}
 Provides:       ruby-libs = %{version}
 Provides:       ruby-devel = %{version}
 Provides:       rubygems = %{version}
-Conflicts:      ruby(abi) = %{version}
-Conflicts:      ruby-irb = %{version}
-Conflicts:      ruby-rdoc = %{version}
-Conflicts:      ruby-libs = %{version}
-Conflicts:      ruby-devel = %{version}
-Conflicts:      rubygems = %{version}
 
 %description
 Ruby is the interpreted scripting language for quick and easy
