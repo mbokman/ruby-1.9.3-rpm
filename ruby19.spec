@@ -3,7 +3,7 @@
 %define version         %{rubyver}%{rubyminorver}
 
 Name:           ruby
-Version:        %{rubyver}%{rubyminorver}
+Version:        %{version}
 Release:        1%{?dist}
 License:        Ruby License/GPL - see COPYING
 URL:            http://www.ruby-lang.org/
