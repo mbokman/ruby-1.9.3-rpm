@@ -12,19 +12,25 @@ Requires:       libyaml
 Source0:        ftp://ftp.ruby-lang.org/pub/ruby/ruby-%{rubyver}-%{rubyminorver}.tar.gz
 Summary:        An interpreter of object-oriented scripting language
 Group:          Development/Languages
-Provides: ruby(abi) = %{version}
-Provides: ruby-irb
-Provides: ruby-rdoc
-Provides: ruby-libs
-Provides: ruby-devel
-Provides: rubygems
-Obsoletes: ruby(abi) <= %{version}
-Obsoletes: ruby
-Obsoletes: ruby-irb
-Obsoletes: ruby-libs
-Obsoletes: ruby-rdoc
-Obsoletes: ruby-devel
-Obsoletes: rubygems
+Obsoletes:      ruby(abi) <= %{version}
+Obsoletes:      ruby <= %{version}
+Obsoletes:      ruby-irb <= %{version}
+Obsoletes:      ruby-libs <= %{version}
+Obsoletes:      ruby-rdoc <= %{version}
+Obsoletes:      ruby-devel <= %{version}
+Obsoletes:      rubygems <= %{version}
+Provides:       ruby(abi) = %{version}
+Provides:       ruby-irb = %{version}
+Provides:       ruby-rdoc = %{version}
+Provides:       ruby-libs = %{version}
+Provides:       ruby-devel = %{version}
+Provides:       rubygems = %{version}
+Conflicts:      ruby(abi) = %{version}
+Conflicts:      ruby-irb = %{version}
+Conflicts:      ruby-rdoc = %{version}
+Conflicts:      ruby-libs = %{version}
+Conflicts:      ruby-devel = %{version}
+Conflicts:      rubygems = %{version}
 
 %description
 Ruby is the interpreted scripting language for quick and easy
